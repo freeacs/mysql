@@ -1,3 +1,4 @@
+SET SQL_MODE='ALLOW_INVALID_DATES';
 -- Tables with no or minimal foreign keys
 DROP TABLE IF EXISTS test_history;
 DROP TABLE IF EXISTS test_case_files;
