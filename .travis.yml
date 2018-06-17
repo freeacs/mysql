@@ -1,0 +1,12 @@
+sudo: false
+
+env:
+  global:
+    - secure: "u6VXZ+NlvGpEyWD3u0Z7I4TbApRP1j86oGR08cSve4bhpCrOtthxlYPGPjLKXOBk$
+    - secure: "bVg9j9dlCGs2XdqE0cNVxDSk99H6Cth28mI0lx76dyTGzRwnWKTLSnUbrJK8J01E$
+    - secure: "XFmGTJaVaoJpshILuKAN3Dd9opoAdDzFYBjXtON0kQ0e5nNqJaz8iN6yd1A00qea$
+
+script:
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - docker build mysql -t freeacs/mysql
+    - docker push freeacs/mysql
