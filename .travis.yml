@@ -1,5 +1,8 @@
 sudo: false
 
+services:
+  - docker
+
 env:
   global:
     - secure: "u6VXZ+NlvGpEyWD3u0Z7I4TbApRP1j86oGR08cSve4bhpCrOtthxlYPGPjLKXOBk$
