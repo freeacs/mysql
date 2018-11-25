@@ -762,3 +762,7 @@ CREATE TABLE `test_history` (
   PRIMARY KEY (`id`)
 )
 ENGINE = innodb CHARACTER SET = latin1 COLLATE = latin1_general_ci;
+
+-- Setup initial admin user with default password "freeacs"
+INSERT INTO user_ (id, username, secret, fullname, accesslist, is_admin)
+VALUES (1, 'admin', '4E9BA006A68A8767D65B3761E038CF9040C54A00', 'Admin user', 'Admin', 1);
